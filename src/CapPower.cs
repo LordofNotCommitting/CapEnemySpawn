@@ -20,7 +20,7 @@ namespace CapEnemySpawn
     public class CapPower
     {
         //steam mod ID 3594238447
-        static int power_Cap = Plugin.ConfigGeneral.ModData.GetConfigValue<int>("Faction_Missiongen_Power_Cap", 1);
+        static int power_Cap = Plugin.ConfigGeneral.ModData.GetConfigValue<int>("Faction_Missiongen_Power_Cap", 1000000);
         //[HarmonyPatch(typeof(WoundSlotRecord), "ImplantSocketsDefault", MethodType.Getter)]
         static Logger temp_log = new Logger();
         public static void Postfix(ref MissionFactory __instance, ref Mission mission, Faction victim)

@@ -75,7 +75,7 @@ namespace CapEnemySpawn
         [Hook(ModHookType.AfterConfigsLoaded)]
         public static void AfterConfig(IModContext context)
         {
-            Plugin.ConfigGeneral = new ModConfigGeneral("Cap Enemy Spawn", Plugin.ConfigPath);
+            Plugin.ConfigGeneral = new ModConfigGeneral("Cap Enemy Power/Tech", Plugin.ConfigPath);
             Plugin.Save = new ModSave(Plugin.SavePath);
             new Harmony("LoC_" + Plugin.ModAssemblyName).PatchAll();
         }

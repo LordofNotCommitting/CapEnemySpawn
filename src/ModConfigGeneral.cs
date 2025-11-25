@@ -15,8 +15,10 @@ namespace CapEnemySpawn
             this.ModName = ModName;
             this.ModData = new ModConfigData(ConfigPath);
             this.ModData.AddConfigHeader("STRING:General Settings", "general");
-            this.ModData.AddConfigValue("general", "about", "STRING:<color=#f51b1b>New missions</color> will have their  enemy count capped as if their power is X (if their power is higher than X).\n");
+            this.ModData.AddConfigValue("general", "about", "STRING:<color=#f51b1b>New missions</color> will have their  enemy count capped as if their power/tech is X (if it is higher than X).\n");
             this.ModData.AddConfigValue("general", "Faction_Missiongen_Power_Cap", 30000, 500, 100000, "STRING:Set Mission Faction Power Cap", "STRING:New missions will have their enemy count capped as if their power is X (if their power is higher than X).");
+            this.ModData.AddConfigValue("general", "Faction_Missiongen_Tech_Cap", 10, 1, 10, "STRING:Set Mission Faction Tech Cap", "STRING:All missions (including existing ones) will have their enemy tech capped as if their tech is X (if their tech is higher than X). This cap is enforced across all mission with bonus enemy tech and such, with exception of story mission where they have their own unique spawn pool.");
+            
             this.ModData.AddConfigValue("general", "about2", "STRING:<color=#f51b1b>The game must be restarted after setting then saving this config to take effect.</color>\n");
             this.ModData.RegisterModConfigData(ModName);
         }

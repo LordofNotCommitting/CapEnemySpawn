@@ -7,6 +7,11 @@ This mod will not impact outcome of a mission where you were not involved.
 
 Changelog:
 
+
+v1.2.1:
+
+It was not 0.9.9 beta-compatible. It is now.
+
 v1.2:
 
 After consideration, I have came to conclusion that as of 0.9.8, you get completely different expierience at the high tech endgame due to enemies having 4-5AP or so. Therefore I think it is good to give option to cap tech on the enemy as well.

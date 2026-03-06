@@ -16,8 +16,10 @@ using static System.Collections.Specialized.BitVector32;
 namespace CapEnemySpawn
 {
 
+
     [HarmonyPatch(typeof(SpawnSystem), nameof(SpawnSystem.SpawnMonsters))]
     [HarmonyPatch(new Type[] {
+        typeof(Mercenaries),
         typeof(Statistics),
         typeof(Difficulty),
         typeof(TurnController),
@@ -40,7 +42,7 @@ namespace CapEnemySpawn
         //steam mod ID 3594238447
         static int tech_Cap = Plugin.ConfigGeneral.ModData.GetConfigValue<int>("Faction_Missiongen_Tech_Cap", 10);
 
-        public static void Prefix(Statistics statistics, Difficulty difficulty, TurnController turnController, DungeonGeneratedDebugData debugData, MapGrid mapGrid, Creatures creatures, RaidMetadata raidMetadata, PerkFactory perkFactory, string biomeId, Faction faction, Mission mission, float pointsToSpawn, ref int bonusTechLevel, bool ignorePrevTechLevels = false, string debugLabel = null)
+        public static void Prefix(Mercenaries mercenaries, Statistics statistics, Difficulty difficulty, TurnController turnController, DungeonGeneratedDebugData debugData, MapGrid mapGrid, Creatures creatures, RaidMetadata raidMetadata, PerkFactory perkFactory, string biomeId, Faction faction, Mission mission, float pointsToSpawn, ref int bonusTechLevel, bool ignorePrevTechLevels = false, string debugLabel = null)
         {
             //if tech above threshold
             if ((faction.CurrentTechLevel + bonusTechLevel ) > tech_Cap)

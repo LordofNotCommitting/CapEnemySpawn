@@ -8,6 +8,7 @@ This mod will not impact outcome of a mission where you were not involved.
 Changelog:
 
 v1.2.2
+
 Bootstrap tag update to make it work properly for 1.0.
 
 v1.2.1:

@@ -33,7 +33,8 @@ namespace CapEnemySpawn
         typeof(float),
         typeof(int),
         typeof(bool),
-        typeof(string)
+        typeof(string),
+        typeof(bool)
     })]
 
     public class CapTechSecond

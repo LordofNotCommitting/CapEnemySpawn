@@ -36,7 +36,10 @@ namespace CapEnemySpawn
         {
             if (!mission.IsStoryMission)
             {
-                baseTechLevel = tech_Cap;
+                if (baseTechLevel >= tech_Cap)
+                {
+                    baseTechLevel = tech_Cap;
+                }
             }
         }
     }

@@ -7,6 +7,10 @@ This mod will not impact outcome of a mission where you were not involved.
 
 Changelog:
 
+v1.24
+
+1.23 messing with station visit. Fixed.
+
 v1.23
 
 Quasi 1.01 release screwing with display and spawning logic which is dependant on Tech Level. So I had to cap those as well for accurate info display.

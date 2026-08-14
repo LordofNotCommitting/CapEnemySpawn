@@ -34,7 +34,7 @@ namespace CapEnemySpawn
         [HarmonyPostfix]
         public static void Postfix(ref int baseTechLevel, Mission mission)
         {
-            if (!mission.IsStoryMission)
+            if (mission != null && !mission.IsStoryMission )
             {
                 if (baseTechLevel >= tech_Cap)
                 {
